@@ -3,28 +3,28 @@ import type { Giscus } from '$lib/types/giscus';
 import type { DD } from '$lib/types/dd';
 
 import Avatar from '$assets/avatar.png';
-import Avatar_128 from '$assets/avatar.png?w=128&h=128&format=avif;webp&imagetools';
-import Avatar_48_PNG from '$assets/avatar.png?w=48&h=48&imagetools';
-import Avatar_96_PNG from '$assets/avatar.png?w=96&h=96&imagetools';
-import Avatar_192_PNG from '$assets/avatar.png?w=192&h=192&imagetools';
-import Avatar_512_PNG from '$assets/avatar.png?w=512&h=512&imagetools';
+import Avatar_128 from '$assets/avatar_rb.jpg?w=128&h=128&format=avif;webp&imagetools';
+import Avatar_48_PNG from '$assets/avatar_rb.jpg?w=48&h=48&imagetools';
+import Avatar_96_PNG from '$assets/avatar_rb.jpg?w=96&h=96&imagetools';
+import Avatar_192_PNG from '$assets/avatar_rb.jpg?w=192&h=192&imagetools';
+import Avatar_512_PNG from '$assets/avatar_rb.jpg?w=512&h=512&imagetools';
 
 import SiteCover from '$assets/qwer.webp';
 
 export const siteConfig: Site.Config = {
   url: 'https://svelte-qwer.vercel.app',
-  title: 'QWER',
-  subtitle: '🚀 QWER - Built using Svelte with ❤',
-  description: '🚀 QWER - Awesome Blog Starter, Built using Svelte with ❤',
+  title: 'RBlog',
+  subtitle: '💻Tech 🎸MusicImagization 🚄Travel',
+  description: '💻Tech 🎸MusicImagization 🚄Travel',
   lang: 'en',
   timeZone: 'Asia/Taipei',
   since: 2022,
   cover: SiteCover,
   author: {
-    name: 'John Doe',
-    status: '🚀',
+    name: 'RB Lin',
+    status: '🎞️',
     statusTip:
-      '<a href="https://github.com/kwchang0831/svelte-QWER" rel="external" style="color:#0F0" onMouseOver="this.style.color=\'#0FF\'" onMouseOut="this.style.color=\'#0F0\'" >QWER</a> is Awesome !',
+      '<a href="https://www.youtube.com/watch?v=KYuz4C9yDS8" target="_blank" rel="external noopener noreferrer" style="color:#4c8181" onMouseOver="this.style.color=\'#a6c0c0\'" onMouseOut="this.style.color=\'#4c8181\'" >2023 北海道Full ver.</a> 全力趕工中 !',
     avatar: Avatar,
     avatar_128: Avatar_128,
     avatar_48_png: Avatar_48_PNG,
@@ -32,15 +32,15 @@ export const siteConfig: Site.Config = {
     avatar_192_png: Avatar_192_PNG,
     avatar_512_png: Avatar_512_PNG,
     website: 'https://github.com/kwchang0831/svelte-QWER',
-    github: 'https://github.com/kwchang0831',
-    email: 'contact@kwchang0831.dev',
-    bio: `Peace begins <br/> With a smile`,
+    github: 'https://github.com/RBVoidLin',
+    email: 'rblin@csie.io',
+    bio: `Make Big Goals <br/> Practice makes perfect!`,
   },
 };
 
 export const headConfig: Site.Head = {
   // Used for IndieWeb
-  me: ['https://github.com/kwchang0831'],
+  me: ['https://github.com/RBVoidLin'],
   custom: ({ dev }) =>
     dev
       ? [
@@ -93,33 +93,37 @@ export const dateConfig: Site.DateConfig = {
 export const giscusConfig: Giscus.Config = {
   enable: true,
   id: 'giscus-comment',
-  repo: import.meta.env.QWER_GISCUS_REPO,
-  repoId: import.meta.env.QWER_GISCUS_REPO_ID,
-  category: import.meta.env.QWER_GISCUS_CATEGORY,
-  categoryId: import.meta.env.QWER_GISCUS_CATEGORY_ID,
+  repo: 'RBVoidLin/rblog',                     //import.meta.env.QWER_GISCUS_REPO,
+  repoId: 'R_kgDOJHAHOg',                      //import.meta.env.QWER_GISCUS_REPO_ID,
+  category: 'all',                             //import.meta.env.QWER_GISCUS_CATEGORY,
+  categoryId: 'all',                           //import.meta.env.QWER_GISCUS_CATEGORY_ID,
   mapping: 'pathname',
   reactionsEnabled: '1',
   emitMetadata: '0',
-  inputPosition: 'top',
+  inputPosition: 'bottom',
   loading: 'lazy',
   lang: 'en',
   'data-strict': '0',
 };
 
+
 export const navConfig: (DD.Nav | DD.Link)[] = [
   {
-    name: 'About',
-    url: '/about',
+    name: '關於',
+    url: '/',
   },
   {
-    name: 'See Docs 📄',
-    url: 'https://docs-svelte-qwer.vercel.app/',
-    rel: 'external',
+    name: '科。💻',
+    url: '/tech',
   },
   {
-    name: 'Get QWER 🚀',
-    url: 'https://github.com/kwchang0831/svelte-QWER',
-    rel: 'external',
+    name: '繪。音 🎸',
+    url: '/music_coloring',
+    
+  },
+  {
+    name: '旅。食 🚄',
+    url: '/trip',
   },
 ];
 
@@ -127,18 +131,21 @@ export const mobilenavConfig: DD.Nav = {
   orientation: 2,
   links: [
     {
-      name: 'About',
-      url: '/about',
+      name: '關於',
+      url: '/',
     },
     {
-      name: 'See Docs 📄',
-      url: 'https://docs-svelte-qwer.vercel.app/',
-      rel: 'external',
+      name: '科。💻',
+      url: '/tech',
     },
     {
-      name: 'Get QWER 🚀',
-      url: 'https://github.com/kwchang0831/svelte-QWER',
-      rel: 'external',
+      name: '繪。音 🎸',
+      url: '/music_coloring',
+      
+    },
+    {
+      name: '旅。食 🚄',
+      url: '/trip',
     },
   ],
 };
