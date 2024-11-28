@@ -51,6 +51,9 @@
     "createblog": "bash utils/create-blog.sh",
     "prepare": "husky"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "lint-staged": {
     "*.{html,scss,css,svelte,ts,js}": "prettier --write ."
   },
