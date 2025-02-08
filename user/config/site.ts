@@ -34,7 +34,7 @@ export const siteConfig: Site.Config = {
     website: 'https://github.com/kwchang0831/svelte-QWER',
     github: 'https://github.com/RBVoidLin',
     email: 'rblin@csie.io',
-    bio: `Make Big Goals <br/> Practice makes perfect!`,
+    bio: `學了又忘 <br/> 忘了再學`,
   },
 };
 

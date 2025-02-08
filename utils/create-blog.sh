@@ -25,13 +25,13 @@ description:
 summary: 
 published: '$CURRENT_DATE$TIMEZONE_FORMATTED'
 updated: '$CURRENT_DATE$TIMEZONE_FORMATTED'
-cover: ./cover.jpg
+cover: 
 coverCaption: Photo by
 coverStyle: 'IN'
 series_tag:
 series_title:
 tag:
-  - [svelte-QWER]
+  - 
 ---"
 
 # Ensure base path exists
