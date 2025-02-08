@@ -25,7 +25,7 @@ ${
 </subtitle>`
     : ''
 }
-<icon>${new URL(`favicon.png`, siteConfig.url).href}</icon>
+<icon>${new URL(`favicon_rb.jpg`, siteConfig.url).href}</icon>
 <link href="${siteConfig.url}"/>
 <link href="${new URL('atom.xml', siteConfig.url).href}" rel="self" type="application/atom+xml"/>
 <updated>${new Date().toJSON()}</updated>

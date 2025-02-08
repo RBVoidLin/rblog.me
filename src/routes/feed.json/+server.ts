@@ -19,7 +19,7 @@ const render = async () => {
     feed_url: `${new URL(`feed.json`, siteConfig.url).href}`,
     description: siteConfig.description,
     icon: siteConfig.author.avatar,
-    favicon: `${new URL(`favicon.png`, siteConfig.url).href}`,
+    favicon: `${new URL(`favicon_rb.jpg`, siteConfig.url).href}`,
     authors: [
       {
         name: siteConfig.author.name,

@@ -10,7 +10,7 @@
   <meta name="author" content={siteConfig.author.name} />
 
   <link rel="apple-touch-icon" href={siteConfig.author.avatar_192_png} sizes="192x192" type="image/png" />
-  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="/favicon_rb.jpg" type="image/png" />
 
   <meta
     name="generator"

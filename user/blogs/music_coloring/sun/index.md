@@ -85,7 +85,7 @@ Photo by <a href="https://movies.shochiku.co.jp/shotai-movie/" target="_blank">�
 在和室裡 張開了又大又厚的翅膀
 
 蝶のちひさな　醜い顏とその長い觸手と
-蝴蝶那小而又 醜陋的臉以及長長的觸手
+蝴蝶那小而又 醜陋的臉以及長長的觸鬚
 
 紙のやうにひろがる　あつぼつたいつばさの重みと。
 還有如紙般展開 厚重的翅膀的重量。
@@ -138,7 +138,7 @@ Wait a Minute...(? 這樣算電影的提前暴雷嗎
 <a href="https://www.netflix.com/search?q=faceless&jbv=81709654" target="_blank">傳送門 📺 </a>
 
 :::tip 對了
-等等再跟你說😜
+下禮拜再跟你說好了😜
 :::
 ### Spotify
 <Spotify id="1JNQLqxqvwHDekTfOhs4wu"/>
