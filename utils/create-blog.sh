@@ -1,24 +1,35 @@
 #!/bin/bash
 
 BASE_PATH="./user/blogs"
+CATEGORIES=("about" "music" "coloring" "tech" "trip")
 
-# Check if a directory name is provided
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <directory-name>"
+# 顯示選單
+echo "請選擇文章分類："
+select CATEGORY in "${CATEGORIES[@]}"; do
+    if [ -n "$CATEGORY" ]; then
+        break
+    else
+        echo "無效的選擇，請重新選擇"
+    fi
+done
+
+# 輸入文章名稱
+read -p "請輸入文章名稱（英文小寫，可用連字符分隔單詞）: " POST_NAME
+
+# 檢查輸入是否為空
+if [ -z "$POST_NAME" ]; then
+    echo "錯誤：文章名稱不能為空"
     exit 1
 fi
 
-# Get the current date in ISO 8601 format with timezone
+# 獲取當前日期時間
 CURRENT_DATE=$(date "+%Y-%m-%dT%H:%M:%S.000")
 TIMEZONE_FORMATTED=$(date "+%z" | sed 's/\([0-9][0-9]\)\([0-9][0-9]\)/\1:\2/')
 
+# 建立目錄路徑
+DIRECTORY="$BASE_PATH/$CATEGORY/$POST_NAME"
 
-# Every time you enter pnpm run createblog YourDirName, 
-# a folder will be created for you based on the following configuration, 
-# along with a default content for index.md. 
-# You are free to edit the information as needed.
-
-DIRECTORY="$BASE_PATH/$1"
+# 建立 Front Matter 模板
 MD_TEMPLATE="---
 title: 
 description: 
@@ -34,16 +45,24 @@ tag:
   - 
 ---"
 
-# Ensure base path exists
+# 確保基礎目錄存在
 if [ ! -d "$BASE_PATH" ]; then
     mkdir -p "$BASE_PATH"
 fi
 
-# Check if directory exists
+# 確保分類目錄存在
+if [ ! -d "$BASE_PATH/$CATEGORY" ]; then
+    mkdir -p "$BASE_PATH/$CATEGORY"
+fi
+
+# 檢查目錄是否已存在
 if [ -d "$DIRECTORY" ]; then
-    echo "Directory $DIRECTORY already exists!"
+    echo "錯誤：目錄 $DIRECTORY 已存在！"
+    exit 1
 else
-    mkdir "$DIRECTORY"
+    mkdir -p "$DIRECTORY"
     echo "$MD_TEMPLATE" > "$DIRECTORY/index.md"
-    echo "Directory $DIRECTORY and index.md created successfully!"
+    echo "已成功建立文章：$DIRECTORY/index.md"
+    echo "您可以使用以下命令開始編輯："
+    echo "code $DIRECTORY/index.md"
 fi
