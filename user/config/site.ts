@@ -113,16 +113,16 @@ export const navConfig: (DD.Nav | DD.Link)[] = [
     url: '/',
   },
   {
-    name: '科。💻',
+    name: '理域 💻',
     url: '/tech',
   },
   {
-    name: '繪。音 🎸',
+    name: '彩嚮 🎸',
     url: '/music_coloring',
     
   },
   {
-    name: '旅。食 🚄',
+    name: '旅饌 🚄',
     url: '/trip',
   },
 ];
@@ -135,16 +135,16 @@ export const mobilenavConfig: DD.Nav = {
       url: '/',
     },
     {
-      name: '科。💻',
+      name: '理域 💻',
       url: '/tech',
     },
     {
-      name: '繪。音 🎸',
+      name: '彩嚮 🎸',
       url: '/music_coloring',
       
     },
     {
-      name: '旅。食 🚄',
+      name: '旅饌 🚄',
       url: '/trip',
     },
   ],
